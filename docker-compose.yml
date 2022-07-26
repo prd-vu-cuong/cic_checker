@@ -1,0 +1,33 @@
+version: "3.3"
+
+services:
+  cic_app:
+    container_name: cic
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - cic-app:/cic_app
+    ports:
+      - "1806:8000"
+    depends_on:
+      - mysql_db
+
+  mysql_db:
+    image: mysql:8.0
+    restart: always
+    container_name: cic_db
+    ports:
+      - "1997:3306"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD: "root@123"
+      MYSQL_DATABASE: "cic"
+    volumes:
+      - ./mysql:/etc/mysql/conf.d
+      - cic-data:/var/lib/mysql
+
+volumes:
+  cic-app:
+  cic-data:

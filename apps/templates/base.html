@@ -1,0 +1,37 @@
+{% load static compress i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    {% include "_meta.html" %}
+    {% block meta %}
+    {% endblock meta %}
+    {% include "_stylesheet.html" %}
+    {% block css-uncompress %}
+    {% endblock css-uncompress %}
+    {% compress css %}
+        {% block vendor-css %}
+            <link type="text/x-scss" href="{% static '/site/sass/base.scss' %}" rel="stylesheet">
+        {% endblock vendor-css %}
+    {% endcompress %}
+    {% block title %}
+        <title>{{ title|default:"Website Django Template"|capfirst }}</title>
+    {% endblock title %}
+
+</head>
+<body>
+{% block body_content %}
+{% endblock body_content %}
+
+<script src="{% static 'site/plugins/common/common.min.js' %}"></script>
+<script src="{% static 'site/js/custom.min.js' %}"></script>
+<script src="{% static 'site/js/settings.js' %}"></script>
+<script src="{% static 'site/js/gleek.js' %}"></script>
+<script src="{% static 'site/js/styleSwitcher.js' %}"></script>
+{% compress js %}
+    {% block vendor-js %}
+    {% endblock vendor-js %}
+{% endcompress %}
+</body>
+</html>
