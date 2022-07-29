@@ -4,7 +4,7 @@ import openpyxl
 from django.template import loader
 
 # Create your views here.
-from cic_single.services.single import SingleService
+from apps.cic_single.services.single import SingleService
 
 
 def home(request):
