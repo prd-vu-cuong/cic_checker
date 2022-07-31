@@ -3,8 +3,7 @@
         <div class="card-body">
             <h4 class="card-title">Bootstrap Input File</h4>
             <div class="basic-form">
-                <form action="{% url 'import_data' %}" method="post" enctype="multipart/form-data">
-                    {% csrf_token %}
+                <form>
                     <div class="form-group">
                         <input type="file" class="form-control-file" name="excel_file">
                         <button type="submit">Import</button>
@@ -14,6 +13,3 @@
         </div>
     </div>
 </div>
-{% for data in excel_data %}
-    <div>{{ data }}</div>
-{% endfor %}

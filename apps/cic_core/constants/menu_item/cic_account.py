@@ -10,3 +10,5 @@ from apps.cic_core.constants.base.feature_keys import FeatureKey
 class CicAccount(BaseFeature):
     _KEY = FeatureKey.CIC_ACCOUNT
     _NAME = "Tài Khoản CIC"
+    _ICON = "icon-settings menu-icon"
+    _URL = "/accounts"

@@ -8,17 +8,21 @@ from apps.cic_core.constants.menu_item import (
     User,
     History,
     CicAccount,
+    DashBoard,
 )
 
 SINGLE_CHECK_MENU = [
+    DashBoard,
     SingleCheck,
 ]
 
 MULTIPLE_CHECK_MENU = [
+    DashBoard,
     MultipleCheck,
 ]
 
 SUPER_ADMIN_MENU = [
+    DashBoard,
     User,
     History,
     CicAccount,

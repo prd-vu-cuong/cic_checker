@@ -9,3 +9,5 @@ from apps.cic_core.constants.base.feature_keys import FeatureKey
 class MultipleCheck(BaseFeature):
     _KEY = FeatureKey.MULTIPLE_CHECK
     _NAME = "Check Hàng Loạt"
+    _ICON = "icon-eye menu-icon"
+    _URL = "/tools/multiple-checks"

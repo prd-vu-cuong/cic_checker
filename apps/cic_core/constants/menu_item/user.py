@@ -9,3 +9,5 @@ from apps.cic_core.constants.base.feature_keys import FeatureKey
 class User(BaseFeature):
     _KEY = FeatureKey.USER
     _NAME = "Quản Lý User"
+    _ICON = "icon-user menu-icon"
+    _URL = "/user-managements"

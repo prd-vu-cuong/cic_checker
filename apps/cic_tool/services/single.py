@@ -2,6 +2,7 @@
 #  CIC Checker
 #  __author = "cuong"
 #  __date_time = "7/24/22, 5:11 PM"
+from apps.cic_core.constants.menu import SUPER_ADMIN_MENU
 
 
 class SingleService:
@@ -15,4 +16,5 @@ class SingleService:
                 dict(id=3, name="New Customers", count=4565),
                 dict(id=4, name="Customer Satisfaction", count=4565),
             ],
+            menu_items=SUPER_ADMIN_MENU,
         )

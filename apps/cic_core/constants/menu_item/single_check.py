@@ -9,3 +9,5 @@ from apps.cic_core.constants.base.feature_keys import FeatureKey
 class SingleCheck(BaseFeature):
     _KEY = FeatureKey.SINGLE_CHECK
     _NAME = "Check Đơn"
+    _ICON = "icon-eye menu-icon"
+    _URL = "/tools/single-checks"

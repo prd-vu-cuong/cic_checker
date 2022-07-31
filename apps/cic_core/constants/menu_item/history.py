@@ -10,3 +10,5 @@ from apps.cic_core.constants.base.feature_keys import FeatureKey
 class History(BaseFeature):
     _KEY = FeatureKey.HISTORY
     _NAME = "Lịch Sử"
+    _ICON = "icon-list menu-icon"
+    _URL = "/histories"

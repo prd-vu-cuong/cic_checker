@@ -9,3 +9,4 @@ from .history import History
 from .cic_account import CicAccount
 from .multiple_check import MultipleCheck
 from .single_check import SingleCheck
+from .dashboard import DashBoard

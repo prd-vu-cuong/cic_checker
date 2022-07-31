@@ -9,15 +9,15 @@
             <div class="row page-titles mx-0">
                 <div class="col p-md-0">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                        <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ text }}</a></li>
+                        <li class="breadcrumb-item"><a class="link-primary" href="{% url 'cms:dashboard' %}">Home</a></li>
+                        {% block breadcrumbs %}
+                        {% endblock breadcrumbs %}
                     </ol>
                 </div>
             </div>
             <div class="container-fluid">
-                {% block content %}
-                {% endblock content %}
+                {% block cms_content %}
+                {% endblock cms_content %}
             </div>
         </div>
         {% include '_footer.html' %}

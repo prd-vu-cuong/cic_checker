@@ -1,0 +1,11 @@
+{% extends 'cms.html' %}
+
+{% block breadcrumbs %}
+    <li class="breadcrumb-item active"><a {% url 'auth:user-management' %}>Quản Lý User</a></li>
+{% endblock breadcrumbs %}
+
+{% block cms_content %}
+    <div class="row">
+        <h1>Quản lý user</h1>
+    </div>
+{% endblock cms_content %}

@@ -4,3 +4,4 @@ class FeatureKey:
     USER = 3
     CIC_ACCOUNT = 4
     HISTORY = 5
+    DASH_BOARD = 6

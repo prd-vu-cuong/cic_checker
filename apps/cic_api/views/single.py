@@ -6,7 +6,7 @@
 from rest_framework import viewsets, status
 from rest_framework.response import Response
 
-from apps.cic_single.services.single import SingleService
+from apps.cic_tool.services.single import SingleService
 
 
 class SingleCheckViewSet(viewsets.ViewSet):

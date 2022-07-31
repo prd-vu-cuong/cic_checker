@@ -1,0 +1,16 @@
+{% extends 'cms.html' %}
+{% load static %}
+
+{% block breadcrumbs %}
+    <li class="breadcrumb-item active"><a {% url 'tool:single' %}>Check Đơn</a></li>
+{% endblock breadcrumbs %}
+
+{% block cms_content %}
+    <div class="row">
+        <h1>Check Đơn</h1>
+    </div>
+{% endblock cms_content %}
+
+{% block vendor-js %}
+    <script src="{% static 'site/js/cic/checker.single.js' %}"></script>
+{% endblock vendor-js %}
